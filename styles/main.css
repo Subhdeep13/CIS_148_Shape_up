@@ -46,20 +46,24 @@ header h2 {
 	margin-top: 0;
 }
 
-/* navigation menu */
 #nav_menu ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
 	background-color: steelblue;
 	position: relative;
 }
 
+#nav_menu > ul {
+	display: block;
+}
+
 #nav_menu ul li {
 	position: relative;
-	flex: 1 1 20%;
+}
+
+#nav_menu > ul > li {
+	width: 100%;
 }
 
 #nav_menu ul li a {
@@ -81,24 +85,25 @@ header h2 {
 #nav_menu ul ul {
 	display: none;
 	position: absolute;
-	top: 100%;
-	left: 0;
-	width: 100%;
+	top: 0;
+	left: 100%;
+	width: 180px;
 	flex-direction: column;
 	z-index: 1000;
 }
 
 #nav_menu ul ul li {
-	flex-basis: 100%;
+	width: 100%;
 }
 
 #nav_menu ul li:hover > ul,
 #nav_menu ul li:focus-within > ul {
-	display: flex;
+	display: block;
 }
 
 #nav_menu ul ul li a {
-	text-align: center;
+	text-align: left;
+	padding-left: 1em;
 }
 
 section a:link,
@@ -112,8 +117,8 @@ section a:focus {
 }
 
 section {
-	flex: 1;
-	padding-right: 1em;
+	padding-right: 0;
+	margin-bottom: 1em;
 }
 
 aside {
@@ -121,7 +126,6 @@ aside {
 	border-radius: 20px;
 	padding: 1em;
 	margin: 0;
-	flex-basis: 30%;
 }
 
 aside h2 {
@@ -144,7 +148,7 @@ aside a:focus {
 }
 
 main {
-	display: flex;
+	display: block;
 	padding: 1em;
 }
 
@@ -158,4 +162,43 @@ footer {
 	font-size: 80%;
 	text-align: center;
 	padding: 1em;
+}
+
+@media only screen and (min-width: 768px) {
+	main {
+		display: flex;
+	}
+
+	section {
+		flex: 1;
+		padding-right: 1em;
+		margin-bottom: 0;
+	}
+
+	aside {
+		flex-basis: 30%;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	#nav_menu > ul {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	#nav_menu > ul > li {
+		flex: 1 1 20%;
+		width: auto;
+	}
+
+	#nav_menu ul ul {
+		top: 100%;
+		left: 0;
+		width: 100%;
+	}
+
+	#nav_menu ul ul li a {
+		text-align: center;
+		padding-left: 0;
+	}
 }
