@@ -6,9 +6,8 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 100%;
+	font-size: 1.5vw;
 	width: 100%;
-	max-width: 960px;
 	margin: 0 auto;
 	box-shadow: 0 0 10px black;
 }
@@ -32,7 +31,7 @@ header img {
 	margin-right: 1em;
 	width: 15vw;
 	max-width: 120px;
-	min-width: 70px;
+	min-width: 100px;
 }
 
 header h1 {
@@ -51,57 +50,54 @@ header h2 {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-#nav_menu > ul {
+	display: flex;
+	flex-wrap: wrap;
 	background-color: steelblue;
 	position: relative;
 }
 
-#nav_menu > ul > li {
+#nav_menu ul li {
 	position: relative;
+	flex: 1 1 20%;
 }
 
-#nav_menu > ul > li > a {
+#nav_menu ul li a {
 	display: block;
-	padding: .6em 1em;
+	padding: .7em 0;
+	text-align: center;
 	text-decoration: none;
 	background-color: steelblue;
 	color: white;
-	text-align: left;
 }
 
-#nav_menu > ul > li > a.current {
-	color: white;
+#nav_menu ul li a.current {
 	border: 2px solid white;
 	border-radius: 10px;
-	margin: .25em;
-	padding: .35em .75em;
+	margin: .2em;
+	padding: .5em 0;
 }
 
 #nav_menu ul ul {
 	display: none;
 	position: absolute;
-	top: 0;
-	left: 100%;
-	min-width: 180px;
-	background-color: steelblue;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	flex-direction: column;
 	z-index: 1000;
 }
 
-#nav_menu ul ul li a {
-	display: block;
-	padding: .75em 1em;
-	text-decoration: none;
-	background-color: steelblue;
-	color: white;
-	text-align: left;
-	white-space: nowrap;
+#nav_menu ul ul li {
+	flex-basis: 100%;
 }
 
 #nav_menu ul li:hover > ul,
 #nav_menu ul li:focus-within > ul {
-	display: block;
+	display: flex;
+}
+
+#nav_menu ul ul li a {
+	text-align: center;
 }
 
 section a:link,
@@ -114,14 +110,9 @@ section a:focus {
 	color: steelblue;
 }
 
-main {
-	display: block;
-	padding: 1em;
-}
-
 section {
-	margin-bottom: 1em;
-	padding-right: 0;
+	flex: 1;
+	padding-right: 1em;
 }
 
 aside {
@@ -129,6 +120,7 @@ aside {
 	border-radius: 20px;
 	padding: 1em;
 	margin: 0;
+	flex-basis: 30%;
 }
 
 aside h2 {
@@ -150,6 +142,11 @@ aside a:focus {
 	color: maroon;
 }
 
+main {
+	display: flex;
+	padding: 1em;
+}
+
 section, aside, h2, h3, p, blockquote, ul, li, footer {
 	margin-bottom: .5em;
 }
@@ -160,6 +157,50 @@ footer {
 	font-size: 80%;
 	text-align: center;
 	padding: 1em;
+}
+
+@media only screen and (max-width: 767px) {
+	body {
+		font-size: 100%;
+	}
+
+	main {
+		display: block;
+	}
+
+	section {
+		padding-right: 0;
+		margin-bottom: 1em;
+	}
+
+	aside {
+		flex-basis: auto;
+	}
+
+	#nav_menu ul {
+		display: block;
+	}
+
+	#nav_menu ul li {
+		flex: none;
+		width: 100%;
+	}
+
+	#nav_menu ul li a {
+		text-align: left;
+		padding-left: 1em;
+	}
+
+	#nav_menu ul ul {
+		top: 0;
+		left: 100%;
+		width: 180px;
+	}
+
+	#nav_menu ul ul li a {
+		text-align: left;
+		padding-left: 1em;
+	}
 }
 
 @media only screen and (min-width: 768px) {
@@ -176,34 +217,30 @@ footer {
 	aside {
 		flex-basis: 30%;
 	}
-}
 
-@media only screen and (min-width: 900px) {
-	#nav_menu > ul {
+	#nav_menu ul {
 		display: flex;
 		flex-wrap: wrap;
 	}
 
-	#nav_menu > ul > li {
+	#nav_menu ul li {
 		flex: 1 1 20%;
+		width: auto;
 	}
 
-	#nav_menu > ul > li > a {
+	#nav_menu ul li a {
 		text-align: center;
-		padding: .7em 0;
-	}
-
-	#nav_menu > ul > li > a.current {
-		display: inline-block;
+		padding-left: 0;
 	}
 
 	#nav_menu ul ul {
 		top: 100%;
 		left: 0;
-		min-width: 200px;
+		width: 100%;
 	}
 
 	#nav_menu ul ul li a {
-		text-align: left;
+		text-align: center;
+		padding-left: 0;
 	}
 }
