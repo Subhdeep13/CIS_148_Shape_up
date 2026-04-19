@@ -6,8 +6,9 @@
 
 body {
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.5vw;
+	font-size: 100%;
 	width: 100%;
+	max-width: 960px;
 	margin: 0 auto;
 	box-shadow: 0 0 10px black;
 }
@@ -31,7 +32,7 @@ header img {
 	margin-right: 1em;
 	width: 15vw;
 	max-width: 120px;
-	min-width: 100px;
+	min-width: 70px;
 }
 
 header h1 {
@@ -50,36 +51,32 @@ header h2 {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	background-color: steelblue;
-	position: relative;
 }
 
 #nav_menu > ul {
-	display: block;
-}
-
-#nav_menu ul li {
+	background-color: steelblue;
 	position: relative;
 }
 
 #nav_menu > ul > li {
-	width: 100%;
+	position: relative;
 }
 
-#nav_menu ul li a {
+#nav_menu > ul > li > a {
 	display: block;
-	padding: .7em 0;
-	text-align: center;
+	padding: .6em 1em;
 	text-decoration: none;
 	background-color: steelblue;
 	color: white;
+	text-align: left;
 }
 
-#nav_menu ul li a.current {
+#nav_menu > ul > li > a.current {
+	color: white;
 	border: 2px solid white;
 	border-radius: 10px;
-	margin: .2em;
-	padding: .5em 0;
+	margin: .25em;
+	padding: .35em .75em;
 }
 
 #nav_menu ul ul {
@@ -87,23 +84,24 @@ header h2 {
 	position: absolute;
 	top: 0;
 	left: 100%;
-	width: 180px;
-	flex-direction: column;
+	min-width: 180px;
+	background-color: steelblue;
 	z-index: 1000;
 }
 
-#nav_menu ul ul li {
-	width: 100%;
+#nav_menu ul ul li a {
+	display: block;
+	padding: .75em 1em;
+	text-decoration: none;
+	background-color: steelblue;
+	color: white;
+	text-align: left;
+	white-space: nowrap;
 }
 
 #nav_menu ul li:hover > ul,
 #nav_menu ul li:focus-within > ul {
 	display: block;
-}
-
-#nav_menu ul ul li a {
-	text-align: left;
-	padding-left: 1em;
 }
 
 section a:link,
@@ -116,9 +114,14 @@ section a:focus {
 	color: steelblue;
 }
 
+main {
+	display: block;
+	padding: 1em;
+}
+
 section {
-	padding-right: 0;
 	margin-bottom: 1em;
+	padding-right: 0;
 }
 
 aside {
@@ -145,11 +148,6 @@ aside a:visited {
 aside a:hover,
 aside a:focus {
 	color: maroon;
-}
-
-main {
-	display: block;
-	padding: 1em;
 }
 
 section, aside, h2, h3, p, blockquote, ul, li, footer {
@@ -188,17 +186,24 @@ footer {
 
 	#nav_menu > ul > li {
 		flex: 1 1 20%;
-		width: auto;
+	}
+
+	#nav_menu > ul > li > a {
+		text-align: center;
+		padding: .7em 0;
+	}
+
+	#nav_menu > ul > li > a.current {
+		display: inline-block;
 	}
 
 	#nav_menu ul ul {
 		top: 100%;
 		left: 0;
-		width: 100%;
+		min-width: 200px;
 	}
 
 	#nav_menu ul ul li a {
-		text-align: center;
-		padding-left: 0;
+		text-align: left;
 	}
 }
