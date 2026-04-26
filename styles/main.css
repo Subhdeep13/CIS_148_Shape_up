@@ -115,6 +115,11 @@ section {
 	padding-right: 1em;
 }
 
+/* ✅ ADDED THIS */
+section h3 {
+	color: maroon;
+}
+
 aside {
 	border: 2px solid steelblue;
 	border-radius: 20px;
@@ -253,4 +258,9 @@ footer {
 		text-align: center;
 		padding-left: 0;
 	}
+}
+
+.no-bullets {
+	list-style: none;
+	padding-left: 0;
 }
