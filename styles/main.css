@@ -115,6 +115,7 @@ section {
 	padding-right: 1em;
 }
 
+/* ✅ ADDED THIS */
 section h3 {
 	color: maroon;
 }
@@ -263,3 +264,46 @@ footer {
 	list-style: none;
 	padding-left: 0;
 }
+
+@font-face {
+	font-family: "AmericanCaptain";
+	src: url("../fonts/American Captain.ttf");
+}
+
+header h1 {
+	font-family: "AmericanCaptain", Arial, sans-serif;
+}
+
+figure {
+	float: left;
+	margin: .25em 1em 1em 0;
+	width: 250px;
+}
+
+figure img {
+	width: 100%;
+}
+
+figcaption {
+	font-size: 90%;
+	font-weight: bold;
+	margin-bottom: .25em;
+}
+
+.icon-list {
+	list-style: none;
+	padding-left: 0;
+}
+
+.icon-list li {
+	padding-left: 30px;
+	margin-bottom: .5em;
+	background-repeat: no-repeat;
+	background-size: 20px;
+}
+
+.icon-list li:nth-child(1) { background-image: url("../images/run.png"); }
+.icon-list li:nth-child(2) { background-image: url("../images/stretch.png"); }
+.icon-list li:nth-child(3) { background-image: url("../images/strength.png"); }
+.icon-list li:nth-child(4) { background-image: url("../images/cardio.png"); }
+.icon-list li:nth-child(5) { background-image: url("../images/yoga.png"); }
