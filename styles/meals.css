@@ -1,0 +1,91 @@
+section h2 {
+	color: maroon;
+	margin-bottom: .5em;
+}
+
+form {
+	width: 100%;
+}
+
+fieldset {
+	border: 2px solid lightgray;
+	border-radius: 5px;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+legend {
+	color: maroon;
+	font-weight: bold;
+	padding: 0 .5em;
+}
+
+label {
+	display: block;
+	margin-top: .5em;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+	width: 100%;
+	padding: .5em;
+	margin-top: .25em;
+	border: 2px solid #ff7f7f;
+	border-radius: 3px;
+}
+
+textarea {
+	height: 80px;
+	resize: vertical;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+	margin-right: .25em;
+	margin-top: .5em;
+}
+
+.buttons {
+	border: none;
+	padding-left: 0;
+}
+
+.button {
+	width: 100px;
+	padding: .5em;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	cursor: pointer;
+	margin-right: 1em;
+}
+
+.submit-btn {
+	background-color: steelblue;
+}
+
+.reset-btn {
+	background-color: darkred;
+}
+
+.submit-btn:hover {
+	background-color: #315f86;
+}
+
+.reset-btn:hover {
+	background-color: #8b0000;
+}
+
+@media only screen and (max-width: 767px) {
+	main {
+		display: block;
+	}
+
+	aside {
+		width: 100%;
+		margin-top: 1em;
+	}
+}
