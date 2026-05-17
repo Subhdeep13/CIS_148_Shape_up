@@ -1,0 +1,90 @@
+section h2 {
+	color: maroon;
+	text-align: center;
+	font-size: 200%;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 2px solid black;
+}
+
+thead {
+	background-color: steelblue;
+	color: white;
+}
+
+th,
+td {
+	padding: .35em .6em;
+	text-align: left;
+}
+
+td:first-child {
+	font-weight: bold;
+}
+
+td:last-child {
+	text-align: right;
+}
+
+@media only screen and (max-width: 767px) {
+	main {
+		display: block;
+	}
+
+	aside {
+		display: none;
+	}
+
+	section {
+		padding-right: 0;
+	}
+
+	table,
+	thead,
+	tbody,
+	tr,
+	th,
+	td {
+		display: block;
+	}
+
+	table {
+		border: 2px solid black;
+	}
+
+	thead {
+		display: none;
+	}
+
+	tr {
+		margin-bottom: 0;
+	}
+
+	td {
+		padding: .25em .5em;
+		border: none;
+	}
+
+	td:first-child {
+		background-color: steelblue;
+		color: white;
+		font-weight: bold;
+	}
+
+	td:first-child:empty {
+		display: none;
+	}
+
+	td:nth-child(2),
+	td:nth-child(3),
+	td:nth-child(4) {
+		padding-left: 1em;
+	}
+
+	td:nth-child(4)::after {
+		content: " calories";
+	}
+}
