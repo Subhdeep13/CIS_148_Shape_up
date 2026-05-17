@@ -4,12 +4,168 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Shape Up! | Meal Plan</title>
+
+	<link rel="shortcut icon" href="../images/favicon.ico">
+	<link rel="stylesheet" href="../styles/main.css">
+	<link rel="stylesheet" href="../styles/meals.css">
 </head>
 
 <body>
-	<main>
-	    <h1>Meal Plan</h1>
-		<h2>Under Construction</h2>	    
-	</main>
+
+<header>
+	<img src="../images/shape_up_logo.png" alt="Shape Up logo">
+
+	<h1>Shape Up!</h1>
+	<h2>Find the best fit for you</h2>
+</header>
+
+<nav id="nav_menu">
+	<ul>
+		<li><a href="../index.html">Home</a></li>
+		<li><a href="../strength/strength.html">Strength Training</a></li>
+		<li><a href="../cardio/cardio.html">Cardio Exercises</a></li>
+
+		<li>
+			<a href="../stress/stress.html">Stress Relief &#9660;</a>
+		</li>
+
+		<li>
+			<a href="#" class="current">Healthy Diets &#9660;</a>
+		</li>
+	</ul>
+</nav>
+
+<main>
+
+<section>
+
+<h2>Meal plan order form</h2>
+
+<p>
+Fill out the form as completely as possible and we will email you a weekly meal plan,
+customized for you—your lifestyle, your goals, and your personal needs.
+</p>
+
+<p>Asterisks (*) indicate required entries.</p>
+
+<form action="#" method="get">
+
+	<fieldset>
+		<legend>Tell us about yourself</legend>
+
+		<label for="name">Full name *</label>
+		<input type="text" id="name" name="name" required>
+
+		<label for="email">Email *</label>
+		<input type="email" id="email" name="email" required>
+
+		<label for="gender">Gender *</label>
+		<select id="gender" name="gender" required>
+			<option value="">Select a gender</option>
+			<option>Male</option>
+			<option>Female</option>
+			<option>Other</option>
+		</select>
+
+		<label for="height">Height *</label>
+		<input type="text" id="height" name="height"
+			placeholder="Example: 5ft, 6in" required>
+
+		<label for="weight">Weight *</label>
+		<input type="text" id="weight" name="weight"
+			placeholder="Example: 145lbs" required>
+
+		<label for="age">Age</label>
+		<select id="age" name="age">
+			<option value="">Select your age</option>
+			<option>18-25</option>
+			<option>26-35</option>
+			<option>36-45</option>
+			<option>46-60</option>
+			<option>60+</option>
+		</select>
+	</fieldset>
+
+	<fieldset>
+		<legend>Lifestyle and goals</legend>
+
+		<p>Which currently matches your present lifestyle?</p>
+
+		<input type="radio" id="active" name="lifestyle" checked>
+		<label for="active">Active</label>
+
+		<input type="radio" id="moderate" name="lifestyle">
+		<label for="moderate">Moderate</label>
+
+		<input type="radio" id="sedentary" name="lifestyle">
+		<label for="sedentary">Sedentary</label>
+
+		<p>What are your weight goals?</p>
+
+		<input type="radio" id="gain" name="goal">
+		<label for="gain">Gain</label>
+
+		<input type="radio" id="lose" name="goal">
+		<label for="lose">Lose</label>
+
+		<input type="radio" id="maintain" name="goal" checked>
+		<label for="maintain">Maintain</label>
+	</fieldset>
+
+	<fieldset>
+		<legend>Food preferences and restrictions</legend>
+
+		<p>Do you have any dietary restrictions? (select all that apply)</p>
+
+		<input type="checkbox" id="vegetarian">
+		<label for="vegetarian">Vegetarian</label>
+
+		<input type="checkbox" id="gluten">
+		<label for="gluten">Gluten-free</label>
+
+		<input type="checkbox" id="kosher">
+		<label for="kosher">Kosher</label>
+
+		<input type="checkbox" id="lowsalt">
+		<label for="lowsalt">Low salt</label>
+
+		<br><br>
+
+		<input type="checkbox" id="other">
+		<label for="other">Other, please explain:</label>
+
+		<textarea></textarea>
+	</fieldset>
+
+	<fieldset class="buttons">
+		<input type="submit" value="Submit" class="button submit-btn">
+
+		<input type="reset" value="Reset" class="button reset-btn">
+	</fieldset>
+
+</form>
+
+</section>
+
+<aside>
+
+<h2>Additional resources</h2>
+
+<ul>
+	<li><a href="#">Physical activity and health</a></li>
+	<li><a href="#">Stretching exercises</a></li>
+	<li><a href="#">Strength training</a></li>
+	<li><a href="#">Cardiovascular training</a></li>
+	<li><a href="#">Yoga workout</a></li>
+</ul>
+
+</aside>
+
+</main>
+
+<footer>
+<p>&copy; Shape Up!</p>
+</footer>
+
 </body>
 </html>
