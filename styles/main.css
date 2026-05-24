@@ -59,15 +59,14 @@ header h2 {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
 	background-color: steelblue;
 	position: relative;
 }
 
 #nav_menu ul li {
 	position: relative;
-	flex: 1 1 20%;
 }
 
 #nav_menu ul li a {
@@ -92,28 +91,24 @@ header h2 {
 	top: 100%;
 	left: 0;
 	width: 100%;
-	flex-direction: column;
 	z-index: 1000;
-}
-
-#nav_menu ul ul li {
-	flex-basis: 100%;
 }
 
 #nav_menu ul li:hover > ul,
 #nav_menu ul li:focus-within > ul {
-	display: flex;
+	display: block;
 }
 
 /* ===== MAIN ===== */
 main {
-	display: flex;
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	gap: 1em;
 	padding: 1em;
 }
 
 /* ===== SECTION ===== */
 section {
-	flex: 1;
 	padding-right: 1em;
 }
 
@@ -165,7 +160,6 @@ aside {
 	border-radius: 20px;
 	padding: 1em;
 	margin: 0;
-	flex-basis: 30%;
 }
 
 aside h2 {
@@ -178,7 +172,7 @@ aside ul {
 	line-height: 1.5;
 }
 
-/* ===== ICONS (MATCH YOUR FILE NAMES) ===== */
+/* ===== ICONS ===== */
 aside li {
 	padding-left: 2em;
 	margin-bottom: .5em;
@@ -227,37 +221,35 @@ footer {
 }
 
 /* ===== SPACING ===== */
-section, aside, h2, h3, p, blockquote, ul, li, footer {
+section,
+aside,
+h2,
+h3,
+p,
+blockquote,
+ul,
+li,
+footer {
 	margin-bottom: .5em;
 }
 
 /* ===== MOBILE ===== */
 @media only screen and (max-width: 767px) {
+
 	body {
 		font-size: 100%;
 	}
 
 	main {
-		display: block;
+		grid-template-columns: 1fr;
 	}
 
 	section {
-		width: 100%;
 		padding-right: 0;
-		margin-bottom: 1em;
-	}
-
-	aside {
-		width: 100%;
-		margin-top: 1em;
 	}
 
 	#nav_menu ul {
-		display: block;
-	}
-
-	#nav_menu ul li {
-		width: 100%;
+		grid-template-columns: 1fr;
 	}
 
 	#nav_menu ul li a {
@@ -265,23 +257,16 @@ section, aside, h2, h3, p, blockquote, ul, li, footer {
 		padding-left: 1em;
 	}
 
-	main > * {
-		float: none;
-		clear: both;
+	#nav_menu ul ul {
+		position: static;
+		width: 100%;
 	}
 }
 
 /* ===== DESKTOP ===== */
 @media only screen and (min-width: 768px) {
+
 	main {
-		display: flex;
-	}
-
-	section {
-		flex: 1;
-	}
-
-	aside {
-		flex-basis: 30%;
+		grid-template-columns: 2fr 1fr;
 	}
 }
